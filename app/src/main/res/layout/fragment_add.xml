@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".AddFragment">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3B3B3B"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <RadioGroup
+        android:id="@+id/rgColorSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/fabAddSaveButton"
+        app:layout_constraintStart_toEndOf="@+id/fabBackButton"
+        app:layout_constraintTop_toTopOf="@+id/fabBackButton"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbRed"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:scaleX="1.3"
+            android:scaleY="1.4"
+            app:buttonTint="@color/noteRed"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rbBlue"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:scaleX="1.3"
+            android:scaleY="1.4"
+            app:buttonTint="@color/noteBlue"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rbYellow"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:scaleX="1.3"
+            android:scaleY="1.4"
+            app:buttonTint="@color/noteYellow"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rbGreen"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:scaleX="1.3"
+            android:scaleY="1.4"
+            app:buttonTint="@color/noteGreen"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#3B3B3B"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/save_icon"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etAddTitle"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Title"
+        android:textColorHint="#9A9A9A"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etAddContent"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/black"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="type something..."
+        android:textColorHint="#9A9A9A"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/etAddTitle"
+        app:layout_constraintTop_toBottomOf="@+id/etAddTitle"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
